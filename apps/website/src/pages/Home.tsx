@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { InstagramEmbed } from '@/components/InstagramEmbed';
 
 const instagramPostUrl = 'https://www.instagram.com/p/DTjFJsrALRV/';
@@ -20,18 +21,18 @@ export function Home() {
             social e cuidado sagrado."
           </blockquote>
           <div className="mt-8 flex justify-center gap-4">
-            <a
-              href="/sobre"
+            <Link
+              to="/sobre"
               className="rounded-md bg-primary px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-primary/90"
             >
               Conheça o projeto
-            </a>
-            <a
-              href="/doacoes"
+            </Link>
+            <Link
+              to="/doacoes"
               className="rounded-md border border-primary px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white"
             >
               Doe agora
-            </a>
+            </Link>
           </div>
         </div>
       </section>
