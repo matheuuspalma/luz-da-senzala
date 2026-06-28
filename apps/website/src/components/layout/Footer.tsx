@@ -15,7 +15,8 @@ export function Footer() {
             <h3 className="mb-3 text-lg font-semibold text-primary">Links</h3>
             <ul className="space-y-2 text-sm text-gray-600">
               <li><a href="/sobre" className="hover:text-primary">Sobre</a></li>
-              <li><a href="/filosofia" className="hover:text-primary">Filosofia</a></li>
+              <li><a href="/cozinha-velha-cambinda" className="hover:text-primary">Cozinha Velha Cambinda</a></li>
+              <li><a href="/filhas-da-terra" className="hover:text-primary">Filhas da Terra</a></li>
               <li><a href="/galeria" className="hover:text-primary">Galeria</a></li>
               <li><a href="/doacoes" className="hover:text-primary">Doações</a></li>
               <li><a href="/contato" className="hover:text-primary">Contato</a></li>

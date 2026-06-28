@@ -1,14 +1,13 @@
-export function Philosophy() {
+export function CozinhaVelhaCambinda() {
   return (
     <div>
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16">
         <div className="mx-auto max-w-7xl px-4 text-center">
           <h1 className="text-3xl font-bold text-primary md:text-4xl">
-            Filosofia
+            Cozinha Ancestral<br />Velha Cambinda
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-gray-600">
-            A cozinha como altar, a comida como reza, a solidariedade como
-            reparação social e cuidado sagrado.
+            Segurança Alimentar e Resistência — Integrada ao Projeto Luz da Senzala.
           </p>
         </div>
       </section>

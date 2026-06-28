@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 const navLinks = [
   { to: '/', label: 'Início' },
   { to: '/sobre', label: 'Sobre' },
-  { to: '/filosofia', label: 'Filosofia' },
+  { to: '/cozinha-velha-cambinda', label: 'Cozinha Velha Cambinda' },
+  { to: '/filhas-da-terra', label: 'Filhas da Terra' },
   { to: '/galeria', label: 'Galeria' },
   { to: '/doacoes', label: 'Doações' },
   { to: '/contato', label: 'Contato' },
