@@ -1,23 +1,29 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 interface InstagramEmbedProps {
   url: string;
 }
 
 export function InstagramEmbed({ url }: InstagramEmbedProps) {
-  const ref = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    if (ref.current) {
-      const script = document.createElement('script');
-      script.src = 'https://www.instagram.com/embed.js';
-      script.async = true;
-      ref.current.appendChild(script);
-    }
+    const script = document.createElement('script');
+    script.src = 'https://www.instagram.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    script.onload = () => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    };
+
+    return () => {
+      script.remove();
+    };
   }, [url]);
 
   return (
-    <div ref={ref} className="flex justify-center">
+    <div className="flex justify-center">
       <blockquote
         className="instagram-media"
         data-instgrm-permalink={url}
