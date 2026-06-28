@@ -6,7 +6,8 @@ export function Footer() {
           <div>
             <h3 className="mb-3 text-lg font-semibold text-primary">Luz da Senzala</h3>
             <p className="text-sm text-gray-600">
-              Projeto social dedicado à promoção da ancestralidade, solidariedade e segurança alimentar.
+              Projeto social dedicado à promoção da ancestralidade, solidariedade e
+              segurança alimentar através da Cozinha Ancestral Velha Cambinda.
             </p>
           </div>
 
@@ -24,8 +25,18 @@ export function Footer() {
           <div>
             <h3 className="mb-3 text-lg font-semibold text-primary">Contato</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li>(xx) xxxx-xxxx</li>
-              <li>contato@luzdasenzala.org</li>
+              <li>(21) 97450-0716</li>
+              <li>projetoluzdasenzala@gmail.com</li>
+              <li>
+                <a
+                  href="https://instagram.com/projetoluzdasenzala"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-secondary hover:underline"
+                >
+                  @projetoluzdasenzala
+                </a>
+              </li>
             </ul>
           </div>
         </div>

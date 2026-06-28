@@ -44,7 +44,7 @@ export function Contact() {
                   <span className="block text-sm font-semibold text-gray-700">Redes Sociais</span>
                   <div className="mt-1 flex gap-3">
                     <a
-                      href="https://instagram.com/projetoluzdasenzala"
+                      href="https://www.instagram.com/projetoluzdasenzala"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-secondary hover:underline"
