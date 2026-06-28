@@ -1,3 +1,8 @@
+import { InstagramEmbed } from '@/components/InstagramEmbed';
+
+const instagramPostUrl =
+  'https://www.instagram.com/p/COLE_AQUI_O_ID_DO_POST/';
+
 export function Home() {
   return (
     <div>
@@ -122,6 +127,28 @@ export function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-card py-16">
+        <div className="mx-auto max-w-7xl px-4 text-center">
+          <h2 className="mb-3 text-2xl font-bold text-primary">
+            Siga nosso trabalho
+          </h2>
+          <p className="mb-8 text-gray-600">
+            Acompanhe as ações no Instagram
+          </p>
+          <div className="flex justify-center">
+            <InstagramEmbed url={instagramPostUrl} />
+          </div>
+          <a
+            href="https://www.instagram.com/projetoluzdasenzala"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-block text-secondary hover:underline"
+          >
+            @projetoluzdasenzala
+          </a>
         </div>
       </section>
     </div>

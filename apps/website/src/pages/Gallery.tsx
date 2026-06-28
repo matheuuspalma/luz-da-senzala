@@ -1,14 +1,7 @@
-const photos = [
-  { src: '/assets/gallery/WhatsApp Image 2026-06-28 at 19.48.53.jpeg', alt: 'Ação comunitária' },
-  { src: '/assets/gallery/WhatsApp Image 2026-06-28 at 19.47.25.jpeg', alt: 'Preparação das refeições' },
-  { src: '/assets/gallery/WhatsApp Image 2026-06-28 at 19.47.21.jpeg', alt: 'Distribuição de alimentos' },
-  { src: '/assets/gallery/WhatsApp Image 2026-06-28 at 19.47.20 (1).jpeg', alt: 'Voluntários em ação' },
-  { src: '/assets/gallery/WhatsApp Image 2026-06-28 at 19.47.20.jpeg', alt: 'Momento de acolhimento' },
-  { src: '/assets/gallery/WhatsApp Image 2026-06-28 at 19.47.19.jpeg', alt: 'Cozinha ancestral' },
-  { src: '/assets/gallery/WhatsApp Image 2026-06-28 at 19.47.18.jpeg', alt: 'Partilha e solidariedade' },
-  { src: '/assets/gallery/WhatsApp Image 2026-04-25 at 10.24.38.jpeg', alt: 'Evento comunitário' },
-  { src: '/assets/gallery/WhatsApp Image 2026-04-14 at 20.48.07.jpeg', alt: 'Registro de encontro' },
-];
+const photos = Array.from({ length: 9 }, (_, i) => ({
+  src: `/assets/gallery/photo-${String(i + 1).padStart(2, '0')}.jpeg`,
+  alt: `Foto ${i + 1}`,
+}));
 
 export function Gallery() {
   return (
