@@ -1,0 +1,102 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Family {
+  id               String         @id @default(uuid())
+  responsibleName  String
+  cpf              String?
+  phone            String?
+  address          String?
+  district         String?
+  city             String?
+  zipCode          String?
+  childrenCount    Int            @default(0)
+  elderlyCount     Int            @default(0)
+  membersCount     Int            @default(0)
+  notes            String?
+  status           String         @default("active")
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+  members          FamilyMember[]
+}
+
+model FamilyMember {
+  id           String   @id @default(uuid())
+  familyId     String
+  name         String
+  birthDate    DateTime?
+  relationship String?
+  education    String?
+  notes        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  family       Family   @relation(fields: [familyId], references: [id], onDelete: Cascade)
+}
+
+model Volunteer {
+  id           String   @id @default(uuid())
+  name         String
+  phone        String?
+  email        String?
+  availability String?
+  role         String?
+  notes        String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Event {
+  id              String   @id @default(uuid())
+  title           String
+  description     String?
+  location        String?
+  eventDate       DateTime?
+  mealsServed     Int      @default(0)
+  volunteersCount Int      @default(0)
+  notes           String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  photos          Photo[]
+}
+
+model Photo {
+  id           String   @id @default(uuid())
+  title        String
+  description  String?
+  category     String?
+  year         Int?
+  url          String
+  thumbnailUrl String?
+  eventId      String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  event        Event?   @relation(fields: [eventId], references: [id])
+}
+
+model News {
+  id          String   @id @default(uuid())
+  title       String
+  summary     String?
+  content     String?
+  coverImage  String?
+  published   Boolean  @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
