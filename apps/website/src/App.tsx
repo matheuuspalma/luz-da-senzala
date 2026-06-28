@@ -1,9 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
+import { useRoutes } from 'react-router-dom';
+import { routes } from '@/routes';
 
 export function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<h1>Luz da Senzala</h1>} />
-    </Routes>
-  );
+  return useRoutes(routes);
 }
