@@ -1,4 +1,4 @@
-const photos = Array.from({ length: 9 }, (_, i) => ({
+const photos = Array.from({ length: 10 }, (_, i) => ({
   src: `/assets/gallery/photo-${String(i + 1).padStart(2, '0')}.jpeg`,
   alt: `Foto ${i + 1}`,
 }));
